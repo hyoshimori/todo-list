@@ -1,9 +1,9 @@
-import './App.css';
+import './style/index.css';
 import Todo from "./components/Todo";
 
 function App() {
   return (
-    <div className=''>
+    <div className='app'>
       <h2>Reminder</h2>
       <Todo />
     </div>

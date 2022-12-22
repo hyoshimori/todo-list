@@ -5,28 +5,38 @@ import { useState } from "react";
 
 const Todo = () => {
 
-  const todoListExamples = [
+  const todoList = [
     {
       id: Math.floor(Math.random() * 1e5),
-      content: "Do the dishes",
+      content: "Do the dishes.",
     },
     {
       id: Math.floor(Math.random() * 1e5),
-      content: "Prepare lunch for tomorrow",
+      content: "Prepare lunch for tomorrow.",
     },
     {
       id: Math.floor(Math.random() * 1e5),
-      content: "Buy an apple",
+      content: "Buy an apple.",
     },
   ]
 
-  const [ todos, setTodos ] = useState(todoListExamples);
+  const [ todos, setTodos ] = useState(todoList);
 
+  const deleteTodo = (id) => {
+    const newTodos = todos.filter((todo) =>{
+        return todo.id !== id
+      })
+    setTodos(newTodos);
+  }
+
+  const createTodo = (todo) => {
+    setTodos([...todos, todo]);
+  }
 
   return(
-    <div>
-      <List todos={todos} />
-      <Form />
+    <div className="todo">
+      <Form createTodo={createTodo}/>
+      <List todos={todos} deleteTodo={deleteTodo}/>
     </div>
   )
 }

@@ -1,14 +1,13 @@
-const List = ({todos}) => {
-  const complete = () => {
-
+const List = ({todos, deleteTodo}) => {
+  const complete = (id) => {
+    deleteTodo(id)
   }
   return(
-    <div>
+    <div className="list">
       {todos.map((todo) => {
         return(
-          <div key={todo.id}>
-            <FontAwesomeIcon icon="fa-solid fa-check" />
-            <button onClick={() => complete(todo.id)}>Done</button>
+          <div className="list__content" key={todo.id}>
+            <button onClick={() => complete(todo.id)}>Delete</button>
             <span>{todo.content}</span>
           </div>
         )

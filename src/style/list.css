@@ -1,0 +1,14 @@
+.list{
+  padding: 5%;
+}
+
+.list__content{
+  display: flex;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+
+.list button{
+  color: white;
+  border: solid 1px white;
+}
