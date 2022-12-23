@@ -3,18 +3,18 @@ import { useState } from "react";
 const Form = ({createTodo}) => {
 
   const [enteredTodo, setEnteredTodo] = useState("");
-
   const addList = (e) => {
     e.preventDefault();
 
-    const newTodo = {
-      id: Math.floor(Math.random() * 1e5),
-      content: enteredTodo,
-    };
+    if (enteredTodo !== ""){
+      const newTodo = {
+        id: Math.floor(Math.random() * 1e5),
+        content: enteredTodo,
+      };
+      createTodo(newTodo);
 
-    createTodo(newTodo);
-
-    setEnteredTodo("");
+      setEnteredTodo("");
+    }
   }
   return(
     <div className="form">
