@@ -1,3 +1,5 @@
+import Timer from "./timer"
+
 const List = ({todos, deleteTodo}) => {
   const complete = (id) => {
     deleteTodo(id)
@@ -7,8 +9,11 @@ const List = ({todos, deleteTodo}) => {
       {todos.map((todo) => {
         return(
           <div className="list__content" key={todo.id}>
-            <button onClick={() => complete(todo.id)}>Delete</button>
-            <span>{todo.content}</span>
+            <div className="list__content__btn__task">
+              <button onClick={() => complete(todo.id)}>Delete</button>
+              <span>{todo.content}</span>
+            </div>
+            <Timer />
           </div>
         )
       })}

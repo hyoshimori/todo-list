@@ -5,7 +5,13 @@
 .list__content{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 3vh;
+}
+
+.list__content__btn__task{
+  display: flex;
+  align-items: center;
 }
 
 .list button{
