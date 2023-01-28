@@ -1,4 +1,4 @@
-import Timer from "./timer"
+// import Timer from "./timer"
 
 const List = ({todos, deleteTodo}) => {
   const complete = (id) => {
@@ -13,7 +13,7 @@ const List = ({todos, deleteTodo}) => {
               <button onClick={() => complete(todo.id)}>Delete</button>
               <span>{todo.content}</span>
             </div>
-            <Timer />
+            {/* <Timer /> */}
           </div>
         )
       })}

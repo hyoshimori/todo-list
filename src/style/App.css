@@ -11,6 +11,5 @@
 
 .app h2{
   padding: 2% 5%;
-  margin-left: 5%;
-  border-left: solid 2px rgb(70, 70, 70);
+  border-bottom: solid 2px rgb(70, 70, 70);
 }
