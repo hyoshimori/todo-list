@@ -21,6 +21,7 @@ const Form = ({createTodo}) => {
       <form className="form__style" onSubmit={addList}>
         <button onClick={addList}>Add</button>
         <input type="text"
+               placeholder="Input ToDos here."
                onChange={(e) => setEnteredTodo(e.target.value)}
                value={enteredTodo}
         />
