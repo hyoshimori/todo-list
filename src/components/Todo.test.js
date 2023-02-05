@@ -24,6 +24,9 @@ describe('# message component check', () => {
       const buttonEl = screen.getByRole('button', { name: 'Add' })
 
       userEvent.type(input, 'test value');
+      userEvent.click(buttonEl);
+      input.remove();
+
       const text = screen.getByText('test value');
 
       expect(text).toBeInTheDocument();
