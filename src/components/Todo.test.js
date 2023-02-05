@@ -1,10 +1,7 @@
-import { render, screen, cleanup } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import '@testing-library/jest-dom'
 import Todo from "./Todo";
-
-
-afterEach(cleanup);
 
 describe('# message component check', () => {
   describe('3) Form test - Add functionality', () => {
