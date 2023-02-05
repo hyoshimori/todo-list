@@ -10,8 +10,8 @@ describe('# message component check', () => {
       const input = screen.getByRole('textbox', {placeholder: 'Input ToDos here.'});
       const ButtonEl = screen.getByRole('button', { name: 'Add' })
 
-      await userEvent.type(input, 'test value');
-      await userEvent.click(ButtonEl);
+      userEvent.type(input, 'test value');
+      userEvent.click(ButtonEl);
 
       const spanEl = screen.getByText("test value");
       expect(input).toBeInTheDocument('test value');
