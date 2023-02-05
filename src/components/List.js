@@ -1,5 +1,3 @@
-// import Timer from "./timer"
-
 const List = ({todos, deleteTodo}) => {
   const complete = (id) => {
     deleteTodo(id)
@@ -13,7 +11,6 @@ const List = ({todos, deleteTodo}) => {
               <button role="deleteButton" aria-checked="false" aria-labelledby="foo" onClick={() => complete(todo.id)}>Done</button>
               <span role="heading" aria-checked="false" aria-labelledby="foo">{todo.content}</span>
             </div>
-            {/* <Timer /> */}
           </div>
         )
       })}

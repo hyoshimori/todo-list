@@ -33,26 +33,23 @@ describe('# message component check', () => {
       expect(buttonEl).toBeInTheDocument();
     })
   })
-  // describe('3) Form test - Done functionality', () => {
-  //   test('● Done button must update "enteredTodo"', async () => {
-  //     // const user = userEvent.setuo();
-  //     render(<Todo/>);
-  //     const input = screen.getByRole('textbox', {placeholder: 'Input ToDos here.'});
-  //     const buttonAddEl = screen.getByRole('button', { name: 'Add' })
-  //     // const buttonDoneEl = screen.getAllByRole('button', { role: 'deleteButton' })
+  describe('3) Form test - Done functionality', () => {
+    test('● Done button must update "enteredTodo"', async () => {
+      render(<Todo/>);
+      const input = screen.getByRole('textbox', {placeholder: 'Input ToDos here.'});
+      const buttonAddEl = screen.getByRole('button', { name: 'Add' })
 
-  //     userEvent.type(input, 'test value');
-  //     expect(input).toBeInTheDocument('test value');
+      userEvent.type(input, 'test value');
+      expect(input).toBeInTheDocument('test value');
 
-  //     userEvent.click(buttonAddEl);
-  //     input.remove();
+      userEvent.click(buttonAddEl);
+      input.remove();
 
-  //     const text = screen.getByRole('heading', {name: 'test value'});
+      const text = screen.getByRole('heading', {name: 'test value'});
+      const buttonDoneEl = screen.getAllByRole('button', { role: 'deleteButton' })
 
-  //     // const buttonDoneEl = screen.getAllByRole('button', { role: 'deleteButton', name: 'Done' })
-
-  //     // await user.click(buttonDoneEl[buttonDoneEl.length - 1]);
-  //     // expect(text).toBeInTheDocument('');
-  //   })
-  // })
+      userEvent.click(buttonDoneEl[buttonDoneEl.length - 1]);
+      expect(text).not.toBeInTheDocument('test value');
+    })
+  })
 })
