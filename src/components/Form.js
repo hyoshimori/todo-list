@@ -5,7 +5,6 @@ const Form = ({createTodo}) => {
   const [enteredTodo, setEnteredTodo] = useState("");
   const addList = (e) => {
     e.preventDefault();
-
     if (enteredTodo !== ""){
       const newTodo = {
         id: Math.floor(Math.random() * 1e5),
@@ -22,7 +21,9 @@ const Form = ({createTodo}) => {
         <button onClick={addList}>Add</button>
         <input type="text"
                placeholder="Input ToDos here."
-               onChange={(e) => setEnteredTodo(e.target.value)}
+               onChange={(e) => {
+                setEnteredTodo(e.target.value)
+              }}
                value={enteredTodo}
         />
       </form>

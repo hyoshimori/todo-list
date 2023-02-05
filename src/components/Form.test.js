@@ -1,7 +1,9 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import '@testing-library/jest-dom'
 import Form from "./Form";
+
+afterEach(cleanup);
 
 describe('# message component check', () => {
   describe('1) Form test - Input functionality', () => {
