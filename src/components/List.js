@@ -10,8 +10,8 @@ const List = ({todos, deleteTodo}) => {
         return(
           <div className="list__content" key={todo.id}>
             <div className="list__content__btn__task">
-              <button onClick={() => complete(todo.id)}>Done</button>
-              <span id="span">{todo.content}</span>
+              <button role="deleteButton" aria-checked="false" aria-labelledby="foo" onClick={() => complete(todo.id)}>Done</button>
+              <span role="heading" aria-checked="false" aria-labelledby="foo">{todo.content}</span>
             </div>
             {/* <Timer /> */}
           </div>
